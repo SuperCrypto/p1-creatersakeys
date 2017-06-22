@@ -29,13 +29,13 @@ On the above output, my target Slot = 0.
 - Go to Folder PprjRsaKeys\jar-git
 - On the command prompt, run:
 ```
-** java -jar CreateRsaKeys.jar <OPTIONS> **
+ java -jar CreateRsaKeys.jar <OPTIONS> 
 ```
 
 ## Help
 Getting help:
 ```
-** java -jar CreateRsaKeys.jar **
+ java -jar CreateRsaKeys.jar 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 CreateRsaKeys
@@ -53,7 +53,7 @@ usage: CreateRsaKeys [-k <arg>] [-p <arg>] [-pr <arg>] [-pu <arg>] [-s <arg>] [-
 
 ## Example 1
 ```
-** java -jar CreateRsaKeys.jar -s 0 -p Password#123 -k 2048 -sa yes -pr MY-PRIVATE -pu MY-PUBLIC **
+ java -jar CreateRsaKeys.jar -s 0 -p Password#123 -k 2048 -sa yes -pr MY-PRIVATE -pu MY-PUBLIC 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 CreateRsaKeys
@@ -62,13 +62,13 @@ CreateRsaKeys
 Session Opened
 Login finished
 Private key with the given label already exists?
-**>No, we are good to proceed**
+>No, we are good to proceed
 Starting Generate Key Pair process
 Salt is ON
 Calling GenerateKeyPair method
-**>Keys generated sucessfully**
+>Keys generated sucessfully
 Private key is in the HSM? Let me check...
-**>Yes, it is!**
+>Yes, it is!
 Finished key pair generation.
 Logout done
 Session closed
@@ -88,7 +88,7 @@ CreateRsaKeys
 Session Opened
 Login finished
 Private key with the given label already exists?
-**>Private Key with the label MY-PRIVATE already exists, aborting key pair generation**
+>Private Key with the label MY-PRIVATE already exists, aborting key pair generation
 Logout done
 Session closed
 Library finalized
@@ -97,7 +97,7 @@ Library finalized
 ## Final checking
 If you wish to check whether the created keys are in the HSM, run the below command provided by Luna client:
 ```
-**cmu list**
+cmu list
 
 Select token
  [0] Token Label: partition-01
