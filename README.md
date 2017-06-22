@@ -1,13 +1,13 @@
 # p1-creatersakeys
 Using JCProv, a library provided by Gemalto, this program creates RSA Keys within the Luna HSMs.
 
-##Eclipse Project:
+## Eclipse Project:
 This project is being provided with the whole Eclipse Project folder.
 In order to compile using Eclipse IDE, you need:
 - Copy folder LIBRARIES to C:\ **OR** modify file .classpath in order to find the required libraries.
 - On Eclipse, check if External Jars (commons-cli-1.3.1.jar, commons-codec-1.10.jar and jcprov.jar) are there (see file **eclipse1.png** for more information)
 
-##Pre-requisites:
+## Pre-requisites:
 - To have Luna client installed
 - Partition assigned to the client
 - Check your slot list using:
@@ -25,14 +25,14 @@ On the above output, my target Slot = 0.
    
    
 
-##Using:
+## Using:
 - Go to Folder PprjRsaKeys\jar-git
 - On the command prompt, run:
 ```
 ** java -jar CreateRsaKeys.jar <OPTIONS> **
 ```
 
-##Help
+## Help
 Getting help:
 ```
 ** java -jar CreateRsaKeys.jar **
@@ -51,7 +51,7 @@ usage: CreateRsaKeys [-k <arg>] [-p <arg>] [-pr <arg>] [-pu <arg>] [-s <arg>] [-
  -sa,--salt <arg>              yes / no
 ```
 
-##Example 1
+## Example 1
 ```
 ** java -jar CreateRsaKeys.jar -s 0 -p Password#123 -k 2048 -sa yes -pr MY-PRIVATE -pu MY-PUBLIC **
 
@@ -77,7 +77,7 @@ Library finalized
 
 As you can see, the program points step-by-step what it is doing, so you can easily see how the interaction is happening.
 
-##Example 2
+## Example 2
 Although HSM permits to create inumerous keys with same Label, that is not permitted using this program.
 In case you try to create a RSA Private Key with the same name, the below error will be shown:
 ```
@@ -94,7 +94,7 @@ Session closed
 Library finalized
 ```
 
-##Final checking
+## Final checking
 If you wish to check whether the created keys are in the HSM, run the below command provided by Luna client:
 ```
 **cmu list**
@@ -108,5 +108,5 @@ handle=123      label=MY-PUBLIC
 handle=126      label=MY-PRIVATE
 ```
 
-##Getting Professional Support
+## Getting Professional Support
 Email to: supercrypto.contact@gmail.com
